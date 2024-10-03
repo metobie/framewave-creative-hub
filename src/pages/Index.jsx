@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 const Index = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-gradient-to-b from-framewave-darkblue to-framewave-blue">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
+          className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
           crossOrigin="anonymous"
         >
           <source src="https://i.imgur.com/vy8lJhG.mp4" type="video/mp4" />
@@ -21,18 +21,18 @@ const Index = () => {
           <motion.h1
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-5xl md:text-7xl font-bold mb-4"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-6xl md:text-8xl font-bold mb-4 text-shadow-lg"
           >
             Frame Wave
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl md:text-2xl mb-8"
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-2xl md:text-3xl mb-8 text-shadow"
           >
-            Fånga ögonblick, skapa känslor
+            Där varje bild berättar en historia
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -41,71 +41,129 @@ const Index = () => {
           >
             <Link
               to="/kontakt"
-              className="bg-framewave-blue hover:bg-framewave-darkblue text-white font-bold py-3 px-6 rounded-full transition-colors duration-300"
+              className="bg-framewave-lightblue hover:bg-framewave-paleblue text-framewave-darkblue font-bold py-3 px-6 rounded-full transition-colors duration-300 text-lg"
             >
-              Boka nu
+              Skapa magi med oss
             </Link>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-16 bg-framewave-paleblue">
+      <section className="py-20 bg-gradient-to-r from-framewave-blue to-framewave-lightblue">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-framewave-darkblue">
-            Våra tjänster
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-framewave-blue">Musikvideor</h3>
-              <p>Skapa visuellt slående musikvideor som fångar essensen i din musik.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-framewave-blue">Reklamfilmer</h3>
-              <p>Producera övertygande reklamfilmer som engagerar din målgrupp och ökar varumärkeskännedomen.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-framewave-blue">Fotosessioner</h3>
-              <p>Fånga ögonblick och skapa minnen med våra professionella fotosessioner.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-framewave-darkblue">
-            Varför välja Frame Wave?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-framewave-blue">Ung och erfaren</h3>
-              <p>Vi kombinerar ungdomlig energi med gedigen erfarenhet för att skapa unika och innovativa projekt.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-framewave-blue">Personlig touch</h3>
-              <p>Varje projekt är unikt, och vi lägger stor vikt vid att förstå dina visioner och mål.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-framewave-blue">Moderna tekniker</h3>
-              <p>Vi använder de senaste teknikerna och utrustningen för att leverera högkvalitativt innehåll.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-framewave-blue">Kreativitet utan gränser</h3>
-              <p>Vår passion för kreativitet driver oss att tänka utanför boxen och skapa något extraordinärt.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-framewave-lightblue text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Redo att skapa något fantastiskt?</h2>
-          <Link
-            to="/kontakt"
-            className="bg-white text-framewave-darkblue hover:bg-framewave-paleblue font-bold py-3 px-6 rounded-full transition-colors duration-300"
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-center mb-12 text-white"
           >
-            Kontakta oss idag
-          </Link>
+            Vår passion är din vision
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-framewave-darkblue">Musikvideor</h3>
+              <p className="text-framewave-blue">Förvandla din musik till visuella mästerverk som fångar själen i dina toner.</p>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-framewave-darkblue">Reklamfilmer</h3>
+              <p className="text-framewave-blue">Skapa berättelser som inte bara säljer, utan också berör och inspirerar din publik.</p>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-framewave-darkblue">Fotosessioner</h3>
+              <p className="text-framewave-blue">Fånga ögonblick som talar tusen ord och skapar minnen för livet.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-b from-framewave-lightblue to-framewave-paleblue">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-center mb-12 text-framewave-darkblue"
+          >
+            Varför välja Frame Wave?
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white p-8 rounded-lg shadow-xl"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-framewave-blue">Kreativitet utan gränser</h3>
+              <p className="text-framewave-mediumblue">Vi tänker utanför boxen för att skapa något extraordinärt som speglar din unika vision.</p>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white p-8 rounded-lg shadow-xl"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-framewave-blue">Passion för perfektion</h3>
+              <p className="text-framewave-mediumblue">Varje projekt är en möjlighet att överträffa förväntningar och skapa något minnesvärt.</p>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-white p-8 rounded-lg shadow-xl"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-framewave-blue">Personlig touch</h3>
+              <p className="text-framewave-mediumblue">Vi lyssnar, förstår och omsätter dina idéer till visuella mästerverk som berör.</p>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-white p-8 rounded-lg shadow-xl"
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-framewave-blue">Ung energi, gedigen erfarenhet</h3>
+              <p className="text-framewave-mediumblue">Vi kombinerar ungdomlig kreativitet med professionell expertis för att leverera enastående resultat.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-b from-framewave-paleblue to-framewave-lightblue text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold mb-8 text-framewave-darkblue"
+          >
+            Redo att skapa magi tillsammans?
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Link
+              to="/kontakt"
+              className="bg-framewave-darkblue text-white hover:bg-framewave-blue font-bold py-3 px-8 rounded-full transition-colors duration-300 text-xl inline-block"
+            >
+              Låt oss börja vår resa
+            </Link>
+          </motion.div>
         </div>
       </section>
     </div>
