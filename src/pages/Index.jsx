@@ -74,8 +74,8 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-grayscale-100 p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-grayscale-900 font-heading">Musikvideor</h3>
-              <p className="text-grayscale-800 font-sans">Förvandla din musik till visuella mästerverk som fångar själen i dina toner.</p>
+              <h3 className="text-2xl font-semibold mb-4 text-grayscale-900 font-heading">Professionell Videoproduktion</h3>
+              <p className="text-grayscale-800 font-sans">Från koncept till färdig produkt, vi skapar högkvalitativa videor som fångar din vision och engagerar din målgrupp.</p>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -83,8 +83,8 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-grayscale-100 p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-grayscale-900 font-heading">Reklamfilmer</h3>
-              <p className="text-grayscale-800 font-sans">Skapa berättelser som inte bara säljer, utan också berör och inspirerar din publik.</p>
+              <h3 className="text-2xl font-semibold mb-4 text-grayscale-900 font-heading">Kreativ Fotografering</h3>
+              <p className="text-grayscale-800 font-sans">Vi levererar skarpa, uttrycksfulla bilder som berättar din historia och framhäver ditt varumärke på ett unikt sätt.</p>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, x: 20 }}
@@ -92,8 +92,8 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="bg-grayscale-100 p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-grayscale-900 font-heading">Fotosessioner</h3>
-              <p className="text-grayscale-800 font-sans">Fånga ögonblick som talar tusen ord och skapar minnen för livet.</p>
+              <h3 className="text-2xl font-semibold mb-4 text-grayscale-900 font-heading">Skräddarsydda Lösningar</h3>
+              <p className="text-grayscale-800 font-sans">Vi anpassar våra tjänster efter dina specifika behov, oavsett om det gäller företagspresentationer, event eller marknadsföringskampanjer.</p>
             </motion.div>
           </div>
         </div>
@@ -174,6 +174,11 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+    </div>
+  );
+};
+
+export default Index;
     </div>
   );
 };
