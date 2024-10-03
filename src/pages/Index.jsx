@@ -17,36 +17,6 @@ const Index = () => {
           <source src="https://i.imgur.com/vy8lJhG.mp4" type="video/mp4" />
           Din webbläsare stöder inte video-taggen.
         </video>
-        <div className="z-10 text-center text-white">
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-6xl md:text-8xl font-bold mb-4 text-shadow-lg"
-          >
-            Frame Wave
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-2xl md:text-3xl mb-8 text-shadow"
-          >
-            Där varje bild berättar en historia
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <Link
-              to="/kontakt"
-              className="bg-framewave-lightblue hover:bg-framewave-paleblue text-framewave-darkblue font-bold py-3 px-6 rounded-full transition-colors duration-300 text-lg"
-            >
-              Skapa magi med oss
-            </Link>
-          </motion.div>
-        </div>
       </section>
 
       <section className="py-20 bg-gradient-to-r from-framewave-blue to-framewave-lightblue">
