@@ -1,22 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Index = () => {
+  const [videoEnded, setVideoEnded] = useState(false);
+
+  useEffect(() => {
+    const video = document.querySelector('video');
+    if (video) {
+      video.play().catch(error => console.error('Auto-play was prevented:', error));
+    }
+  }, []);
+
   return (
     <div className="bg-gradient-to-b from-framewave-darkblue to-framewave-blue">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
-          crossOrigin="anonymous"
-        >
-          <source src="https://i.imgur.com/vy8lJhG.mp4" type="video/mp4" />
-          Din webbläsare stöder inte video-taggen.
-        </video>
+        {!videoEnded ? (
+          <video
+            autoPlay
+            muted
+            playsInline
+            className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
+            onEnded={() => setVideoEnded(true)}
+            crossOrigin="anonymous"
+          >
+            <source src="https://i.imgur.com/vy8lJhG.mp4" type="video/mp4" />
+            Din webbläsare stöder inte video-taggen.
+          </video>
+        ) : (
+          <motion.img
+            src="https://i.imgur.com/05v2X8s.jpeg"
+            alt="Frame Wave Logo"
+            className="w-1/2 max-w-md"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          />
+        )}
       </section>
 
       <section className="py-20 bg-gradient-to-r from-framewave-blue to-framewave-lightblue">
