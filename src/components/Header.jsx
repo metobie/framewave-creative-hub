@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Camera, Image, Phone, Menu } from 'lucide-react';
+import { Home, Camera, Image, Phone, Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,7 +8,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-grayscale-900 shadow-md">
+    <header className="bg-grayscale-900 shadow-md relative z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img src="https://i.imgur.com/g8zXRwo.png" alt="Frame Wave Logo" className="h-10 w-auto" />
@@ -32,24 +32,24 @@ const Header = () => {
           </Link>
         </nav>
         <button className="md:hidden text-grayscale-100" onClick={toggleMenu}>
-          <Menu className="h-6 w-6" />
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
       {isMenuOpen && (
-        <nav className="md:hidden bg-grayscale-800 px-4 py-2">
-          <Link to="/" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center">
+        <nav className="md:hidden bg-grayscale-800 absolute top-full left-0 right-0 z-50">
+          <Link to="/" className="block py-2 px-4 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center" onClick={toggleMenu}>
             <Home className="w-4 h-4 mr-2" />
             Hem
           </Link>
-          <Link to="/tjanster" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center">
+          <Link to="/tjanster" className="block py-2 px-4 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center" onClick={toggleMenu}>
             <Camera className="w-4 h-4 mr-2" />
             Tjänster
           </Link>
-          <Link to="/portfolio" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center">
+          <Link to="/portfolio" className="block py-2 px-4 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center" onClick={toggleMenu}>
             <Image className="w-4 h-4 mr-2" />
             Portfolio
           </Link>
-          <Link to="/kontakt" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center">
+          <Link to="/kontakt" className="block py-2 px-4 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center" onClick={toggleMenu}>
             <Phone className="w-4 h-4 mr-2" />
             Kontakt
           </Link>
