@@ -1,50 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react'; // Import the ChevronDown icon
 
 const Index = () => {
-  const [videoEnded, setVideoEnded] = useState(false);
-
-  useEffect(() => {
-    const video = document.querySelector('video');
-    if (video) {
-      video.addEventListener('ended', () => setVideoEnded(true));
-      return () => video.removeEventListener('ended', () => setVideoEnded(true));
-    }
-  }, []);
-
   return (
     <div className="bg-gradient-to-b from-framewave-darkblue to-framewave-blue">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {!videoEnded ? (
-          <video
-            autoPlay
-            muted
-            playsInline
-            className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
-            crossOrigin="anonymous"
-            onEnded={() => setVideoEnded(true)}
-          >
-            <source src="https://i.imgur.com/vy8lJhG.mp4" type="video/mp4" />
-            Din webbläsare stöder inte video-taggen.
-          </video>
-        ) : (
-          <img
-            src="https://i.imgur.com/05v2X8s.jpeg"
-            alt="Frame Wave Logo"
-            className="absolute z-0 w-auto max-h-full object-contain"
-          />
-        )}
-        
-        {/* Add the downward-pointing arrow */}
-        <motion.div 
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
+          crossOrigin="anonymous"
         >
-          <ChevronDown size={48} color="white" />
-        </motion.div>
+          <source src="https://i.imgur.com/vy8lJhG.mp4" type="video/mp4" />
+          Din webbläsare stöder inte video-taggen.
+        </video>
       </section>
 
       <section className="py-20 bg-gradient-to-r from-framewave-blue to-framewave-lightblue">
