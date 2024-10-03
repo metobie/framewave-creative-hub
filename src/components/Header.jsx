@@ -8,7 +8,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="bg-grayscale-900 shadow-md fixed top-0 left-0 right-0 z-50">
+    <header className="bg-grayscale-900 shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img src="https://i.imgur.com/g8zXRwo.png" alt="Frame Wave Logo" className="h-10 w-auto" />
