@@ -1,14 +1,13 @@
 import React from 'react';
 
 const Portfolio = () => {
-  // Detta är bara exempel-data. I en riktig implementation skulle detta hämtas från en backend eller CMS.
   const portfolioItems = [
-    { id: 1, title: 'Musikvideo - "Sommardrömmar"', type: 'Video', image: 'https://picsum.photos/seed/1/400/300' },
-    { id: 2, title: 'Produktfotografering - Eco Fashion', type: 'Foto', image: 'https://picsum.photos/seed/2/400/300' },
-    { id: 3, title: 'Reklamfilm - "Framtidens Teknik"', type: 'Video', image: 'https://picsum.photos/seed/3/400/300' },
-    { id: 4, title: 'Porträttserie - "Stadens Hjältar"', type: 'Foto', image: 'https://picsum.photos/seed/4/400/300' },
-    { id: 5, title: 'Eventdokumentation - Kristianstad Kulturnatt', type: 'Video & Foto', image: 'https://picsum.photos/seed/5/400/300' },
-    { id: 6, title: 'Naturfilm - "Skånska Pärlor"', type: 'Video', image: 'https://picsum.photos/seed/6/400/300' },
+    { id: 1, title: 'Musikvideo - "Sommardrömmar"', type: 'Video', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80' },
+    { id: 2, title: 'Produktfotografering - Eco Fashion', type: 'Foto', image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80' },
+    { id: 3, title: 'Reklamfilm - "Framtidens Teknik"', type: 'Video', image: 'https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80' },
+    { id: 4, title: 'Porträttserie - "Stadens Hjältar"', type: 'Foto', image: 'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80' },
+    { id: 5, title: 'Eventdokumentation - Kristianstad Kulturnatt', type: 'Video & Foto', image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80' },
+    { id: 6, title: 'Naturfilm - "Skånska Pärlor"', type: 'Video', image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80' },
   ];
 
   return (

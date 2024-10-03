@@ -5,23 +5,48 @@ import { ChevronDown } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="bg-gradient-to-b from-grayscale-900 to-grayscale-800">
+    <div className="bg-grayscale-900">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
-          crossOrigin="anonymous"
-        >
-          <source src="https://i.imgur.com/vy8lJhG.mp4" type="video/mp4" />
-          Din webbläsare stöder inte video-taggen.
-        </video>
+        <img
+          src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+          alt="Hero background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative z-10 text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold text-grayscale-100 mb-4"
+          >
+            Frame Wave
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl text-grayscale-200 mb-8"
+          >
+            Skapa känslor genom bild
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link
+              to="/kontakt"
+              className="bg-grayscale-100 text-grayscale-900 hover:bg-grayscale-200 font-bold py-3 px-8 rounded-full transition-colors duration-300 text-xl inline-block"
+            >
+              Kontakta oss
+            </Link>
+          </motion.div>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
           <ChevronDown className="text-grayscale-100 w-12 h-12 animate-bounce" />
