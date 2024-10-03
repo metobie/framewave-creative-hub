@@ -18,12 +18,11 @@ const Index = () => {
           <source src="https://i.imgur.com/vy8lJhG.mp4" type="video/mp4" />
           Din webbläsare stöder inte video-taggen.
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 animate-gradient-x z-10"></div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
           <ChevronDown className="text-white w-12 h-12 animate-bounce" />
         </motion.div>
