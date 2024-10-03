@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Camera, Image, Phone } from 'lucide-react';
+import { Home, Camera, Image, Phone, Menu } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +32,7 @@ const Header = () => {
           </Link>
         </nav>
         <button className="md:hidden text-grayscale-100" onClick={toggleMenu}>
-          <img src="https://i.imgur.com/lDDsyFo.png" alt="Menu" className="h-8 w-auto" />
+          <Menu className="h-6 w-6" />
         </button>
       </div>
       {isMenuOpen && (
