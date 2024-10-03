@@ -23,7 +23,7 @@ const Index = () => {
             <img 
               src="https://i.imgur.com/g8zXRwo.png" 
               alt="Frame Wave Logo" 
-              className="mx-auto h-24 md:h-32" // Adjust the size as needed
+              className="mx-auto h-36 md:h-48" // Adjust the size as needed
             />
           </motion.div>
           <motion.p
