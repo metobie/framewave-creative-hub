@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
-            <img src="https://i.imgur.com/oC6PmQ8.jpeg" alt="Frame Wave Symbol" className="h-16 w-auto mx-auto md:mx-0" />
+            <img src="https://i.imgur.com/lDDsyFo.png" alt="Frame Wave Logo" className="h-16 w-auto mx-auto md:mx-0" />
           </div>
           <div className="w-full md:w-1/3 text-center mb-4 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Kontakta oss</h3>
