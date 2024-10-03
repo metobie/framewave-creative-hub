@@ -22,7 +22,7 @@ const Kontakt = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="text-grayscale-700 mr-2" />
-                <p className="text-grayscale-800">info@framewave.se</p>
+                <p className="text-grayscale-800">hej@framewave.se</p>
               </div>
               <div className="flex items-center">
                 <MapPin className="text-grayscale-700 mr-2" />
