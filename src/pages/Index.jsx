@@ -10,7 +10,9 @@ const Index = () => {
           autoPlay
           loop
           muted
+          playsInline
           className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
+          crossOrigin="anonymous"
         >
           <source src="https://i.imgur.com/vy8lJhG.mp4" type="video/mp4" />
           Din webbläsare stöder inte video-taggen.
