@@ -11,7 +11,7 @@ const Header = () => {
     <header className="bg-framewave-darkblue shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img src="https://i.imgur.com/05v2X8s.jpeg" alt="Frame Wave Logo" className="h-10 w-auto" />
+          <img src="https://i.imgur.com/oC6PmQ8.jpeg" alt="Frame Wave Logo" className="h-10 w-auto" />
           <span className="ml-2 text-2xl font-bold text-white font-heading">Frame Wave</span>
         </Link>
         <nav className="hidden md:flex space-x-6">
