@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="w-full md:w-1/3 text-center mb-4 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Kontakta oss</h3>
             <p>Telefon: +46 73-502 46 07</p>
-            <p>E-post: hej@framewave.se</p>
+            <p>E-post: info@framewave.se</p>
             <p>Kristianstad, Sverige</p>
           </div>
           <div className="w-full md:w-1/3 text-center md:text-right">
