@@ -36,25 +36,23 @@ const Header = () => {
         </button>
       </div>
       {isMenuOpen && (
-        <nav className="md:hidden bg-grayscale-800 absolute top-full left-0 right-0 z-50">
-          <div className="container mx-auto px-4 py-2">
-            <Link to="/" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center" onClick={toggleMenu}>
-              <Home className="w-4 h-4 mr-2" />
-              Hem
-            </Link>
-            <Link to="/tjanster" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center" onClick={toggleMenu}>
-              <Camera className="w-4 h-4 mr-2" />
-              Tjänster
-            </Link>
-            <Link to="/portfolio" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center" onClick={toggleMenu}>
-              <Image className="w-4 h-4 mr-2" />
-              Portfolio
-            </Link>
-            <Link to="/kontakt" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center" onClick={toggleMenu}>
-              <Phone className="w-4 h-4 mr-2" />
-              Kontakt
-            </Link>
-          </div>
+        <nav className="md:hidden bg-grayscale-800 px-4 py-2">
+          <Link to="/" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center">
+            <Home className="w-4 h-4 mr-2" />
+            Hem
+          </Link>
+          <Link to="/tjanster" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center">
+            <Camera className="w-4 h-4 mr-2" />
+            Tjänster
+          </Link>
+          <Link to="/portfolio" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center">
+            <Image className="w-4 h-4 mr-2" />
+            Portfolio
+          </Link>
+          <Link to="/kontakt" className="block py-2 text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center">
+            <Phone className="w-4 h-4 mr-2" />
+            Kontakt
+          </Link>
         </nav>
       )}
     </header>
