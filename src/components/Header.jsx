@@ -12,24 +12,24 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img src="https://i.imgur.com/oC6PmQ8.jpeg" alt="Frame Wave Logo" className="h-10 w-auto" />
-          <span className="ml-2 text-2xl font-bold text-white font-heading leading-10">Frame Wave</span>
+          <span className="ml-2 text-2xl font-bold text-white font-heading">Frame Wave</span>
         </Link>
         <nav className="hidden md:flex space-x-6">
-          <Link to="/" className="text-white hover:text-framewave-paleblue transition-colors font-sans font-medium flex items-center h-10">
+          <Link to="/" className="text-white hover:text-framewave-paleblue transition-colors font-sans font-medium flex items-center">
             <Home className="w-4 h-4 mr-2" />
-            <span className="leading-10">Hem</span>
+            Hem
           </Link>
-          <Link to="/tjanster" className="text-white hover:text-framewave-paleblue transition-colors font-sans font-medium flex items-center h-10">
+          <Link to="/tjanster" className="text-white hover:text-framewave-paleblue transition-colors font-sans font-medium flex items-center">
             <Camera className="w-4 h-4 mr-2" />
-            <span className="leading-10">Tjänster</span>
+            Tjänster
           </Link>
-          <Link to="/portfolio" className="text-white hover:text-framewave-paleblue transition-colors font-sans font-medium flex items-center h-10">
+          <Link to="/portfolio" className="text-white hover:text-framewave-paleblue transition-colors font-sans font-medium flex items-center">
             <Image className="w-4 h-4 mr-2" />
-            <span className="leading-10">Portfolio</span>
+            Portfolio
           </Link>
-          <Link to="/kontakt" className="text-white hover:text-framewave-paleblue transition-colors font-sans font-medium flex items-center h-10">
+          <Link to="/kontakt" className="text-white hover:text-framewave-paleblue transition-colors font-sans font-medium flex items-center">
             <Phone className="w-4 h-4 mr-2" />
-            <span className="leading-10">Kontakt</span>
+            Kontakt
           </Link>
         </nav>
         <button className="md:hidden text-white" onClick={toggleMenu}>
