@@ -23,7 +23,7 @@ const Index = () => {
             <img 
               src="https://i.imgur.com/g8zXRwo.png" 
               alt="Frame Wave Logo" 
-              className="mx-auto h-36 md:h-48" // Adjust the size as needed
+              className="mx-auto h-36 md:h-48"
             />
           </motion.div>
           <motion.p
@@ -51,7 +51,7 @@ const Index = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-16 left-1/2 transform -translate-x-1/2"
         >
           <ChevronDown className="text-grayscale-100 w-12 h-12 animate-bounce" />
         </motion.div>
