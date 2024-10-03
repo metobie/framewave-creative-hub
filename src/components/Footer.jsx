@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -16,6 +17,17 @@ const Footer = () => {
           </div>
           <div className="w-full md:w-1/3 text-center md:text-right">
             <p>&copy; 2024 Frame Wave. Alla rättigheter förbehållna.</p>
+            <p className="mt-2">
+              Designed by{' '}
+              <a
+                href="https://renew-io.se"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-grayscale-300 hover:text-grayscale-100 transition-colors"
+              >
+                Renew I/O
+              </a>
+            </p>
           </div>
         </div>
       </div>
