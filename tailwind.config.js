@@ -51,12 +51,17 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        framewave: {
-          darkblue: '#03254c',
-          blue: '#1167b1',
-          mediumblue: '#187bcd',
-          lightblue: '#2a9df4',
-          paleblue: '#d0efff',
+        grayscale: {
+          100: '#FFFFFF',
+          200: '#E6E6E6',
+          300: '#CCCCCC',
+          400: '#B3B3B3',
+          500: '#999999',
+          600: '#808080',
+          700: '#666666',
+          800: '#4D4D4D',
+          900: '#333333',
+          1000: '#1A1A1A',
         },
       },
       borderRadius: {

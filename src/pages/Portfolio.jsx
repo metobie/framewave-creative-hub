@@ -13,14 +13,14 @@ const Portfolio = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-framewave-darkblue mb-8">Vår Portfolio</h1>
+      <h1 className="text-4xl font-bold text-grayscale-900 mb-8">Vår Portfolio</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {portfolioItems.map((item) => (
-          <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div key={item.id} className="bg-grayscale-100 rounded-lg shadow-md overflow-hidden">
             <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-framewave-blue mb-2">{item.title}</h3>
-              <p className="text-framewave-mediumblue">{item.type}</p>
+              <h3 className="text-xl font-semibold text-grayscale-800 mb-2">{item.title}</h3>
+              <p className="text-grayscale-600">{item.type}</p>
             </div>
           </div>
         ))}
