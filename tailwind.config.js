@@ -52,11 +52,11 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         framewave: {
-          darkblue: '#03254c',
-          blue: '#1167b1',
-          mediumblue: '#187bcd',
-          lightblue: '#2a9df4',
-          paleblue: '#d0efff',
+          blue: '#2a9df4',
+          purple: '#a855f7',
+          pink: '#ec4899',
+          darkblue: '#1e40af',
+          lightblue: '#7dd3fc',
         },
       },
       borderRadius: {

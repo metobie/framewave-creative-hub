@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-framewave-darkblue text-white py-8">
+    <footer className="bg-gradient-to-r from-framewave-blue via-framewave-purple to-framewave-pink text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
