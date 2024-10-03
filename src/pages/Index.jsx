@@ -14,14 +14,18 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center">
-          <motion.h1 
+          <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold text-grayscale-100 mb-4"
+            className="mb-4"
           >
-            Frame Wave
-          </motion.h1>
+            <img 
+              src="https://i.imgur.com/g8zXRwo.png" 
+              alt="Frame Wave Logo" 
+              className="mx-auto h-24 md:h-32" // Adjust the size as needed
+            />
+          </motion.div>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
