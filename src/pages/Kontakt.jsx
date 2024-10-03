@@ -6,7 +6,7 @@ const Kontakt = () => {
   return (
     <div className="relative min-h-screen">
       <img
-        src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+        src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
         alt="Contact background"
         className="absolute inset-0 w-full h-full object-cover"
       />
