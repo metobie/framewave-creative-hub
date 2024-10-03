@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Kontakt = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    service: 'video'
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Here you would typically send the form data to a server
+  };
+
   return (
     <div className="relative min-h-screen">
       <img
@@ -32,18 +50,30 @@ const Kontakt = () => {
           </div>
           <div className="bg-grayscale-100 p-6 rounded-lg">
             <h2 className="text-2xl font-semibold text-grayscale-800 mb-4">Skicka ett meddelande</h2>
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-grayscale-700 mb-1">Namn</label>
-                <input type="text" id="name" name="name" className="w-full p-2 border border-grayscale-300 rounded" />
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="w-full p-2 border border-grayscale-300 rounded" required />
               </div>
               <div>
                 <label htmlFor="email" className="block text-grayscale-700 mb-1">E-post</label>
-                <input type="email" id="email" name="email" className="w-full p-2 border border-grayscale-300 rounded" />
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="w-full p-2 border border-grayscale-300 rounded" required />
+              </div>
+              <div>
+                <label htmlFor="phone" className="block text-grayscale-700 mb-1">Telefon</label>
+                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full p-2 border border-grayscale-300 rounded" />
+              </div>
+              <div>
+                <label htmlFor="service" className="block text-grayscale-700 mb-1">Tjänst</label>
+                <select id="service" name="service" value={formData.service} onChange={handleChange} className="w-full p-2 border border-grayscale-300 rounded">
+                  <option value="video">Videoproduktion</option>
+                  <option value="photo">Fotografi</option>
+                  <option value="other">Annat</option>
+                </select>
               </div>
               <div>
                 <label htmlFor="message" className="block text-grayscale-700 mb-1">Meddelande</label>
-                <textarea id="message" name="message" rows="4" className="w-full p-2 border border-grayscale-300 rounded"></textarea>
+                <textarea id="message" name="message" value={formData.message} onChange={handleChange} rows="4" className="w-full p-2 border border-grayscale-300 rounded" required></textarea>
               </div>
               <button type="submit" className="bg-grayscale-800 hover:bg-grayscale-900 text-grayscale-100 font-bold py-2 px-4 rounded transition-colors duration-300">
                 Skicka
