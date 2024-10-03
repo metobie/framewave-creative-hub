@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -11,20 +12,38 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-grayscale-900 mb-8">Vår Portfolio</h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="container mx-auto px-4 py-16"
+    >
+      <motion.h1
+        initial={{ y: -50 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl font-bold text-grayscale-900 mb-8"
+      >
+        Vår Portfolio
+      </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {portfolioItems.map((item) => (
-          <div key={item.id} className="bg-grayscale-100 rounded-lg shadow-md overflow-hidden">
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="bg-grayscale-100 rounded-lg shadow-md overflow-hidden"
+          >
             <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
             <div className="p-4">
               <h3 className="text-xl font-semibold text-grayscale-800 mb-2">{item.title}</h3>
               <p className="text-grayscale-600">{item.type}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

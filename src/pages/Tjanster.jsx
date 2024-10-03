@@ -1,7 +1,13 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const ServiceCard = ({ title, items, imageSrc }) => (
-  <div className="bg-grayscale-200 p-6 rounded-lg overflow-hidden">
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="bg-grayscale-200 p-6 rounded-lg overflow-hidden"
+  >
     <img src={imageSrc} alt={title} className="w-full h-48 object-cover mb-4 rounded" />
     <h2 className="text-2xl font-semibold text-grayscale-800 mb-4">{title}</h2>
     <ul className="list-disc list-inside space-y-2 text-grayscale-700">
@@ -9,7 +15,7 @@ const ServiceCard = ({ title, items, imageSrc }) => (
         <li key={index}>{item}</li>
       ))}
     </ul>
-  </div>
+  </motion.div>
 );
 
 const Tjanster = () => {
@@ -27,17 +33,34 @@ const Tjanster = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-grayscale-900 mb-8">Våra Tjänster</h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="container mx-auto px-4 py-16"
+    >
+      <motion.h1
+        initial={{ y: -50 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl font-bold text-grayscale-900 mb-8"
+      >
+        Våra Tjänster
+      </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}
       </div>
-      <p className="mt-8 text-lg text-grayscale-800">
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className="mt-8 text-lg text-grayscale-800"
+      >
         Oavsett ditt projekt, är vi här för att hjälpa dig att förverkliga din vision. Kontakta oss för att diskutera dina idéer och få ett skräddarsytt erbjudande.
-      </p>
-    </div>
+      </motion.p>
+    </motion.div>
   );
 };
 
