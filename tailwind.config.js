@@ -78,6 +78,10 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+        heading: ['Raleway', 'sans-serif'],
+      },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
         DEFAULT: '0 2px 4px var(--tw-shadow-color)',
@@ -98,4 +102,4 @@ module.exports = {
       )
     },
   ],
-};
+}
