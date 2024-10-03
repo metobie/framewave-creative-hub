@@ -11,8 +11,7 @@ const Header = () => {
     <header className="bg-grayscale-900 shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img src="https://i.imgur.com/oC6PmQ8.jpeg" alt="Frame Wave Logo" className="h-10 w-auto" />
-          <span className="ml-2 text-2xl font-bold text-grayscale-100 font-heading">Frame Wave</span>
+          <img src="https://i.imgur.com/g8zXRwo.png" alt="Frame Wave Logo" className="h-10 w-auto" />
         </Link>
         <nav className="hidden md:flex space-x-6">
           <Link to="/" className="text-grayscale-100 hover:text-grayscale-300 transition-colors font-sans font-medium flex items-center">
